@@ -17,16 +17,20 @@
     <!-- Tailwind CSS desde CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .bg-cgs-yellow { background-color: #FFB000; }
+        /* Paleta de Colores Oficiales CGS */
+        .bg-cgs-navy { background-color: #0b172a; }        /* Azul Marino Corporativo CGS */
+        .bg-cgs-card { background-color: #0f213d; }        /* Azul Tarjeta Formulario */
+        .bg-cgs-input { background-color: #07101e; }       /* Azul Oscuro Campos Entrada */
+        .bg-cgs-yellow { background-color: #FFB000; }      /* Amarillo/Dorado CGS */
         .text-cgs-yellow { color: #FFB000; }
         .border-cgs-yellow { border-color: #FFB000; }
         .hover\:bg-cgs-yellow-dark:hover { background-color: #e09b00; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-cgs-navy text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
     <!-- Header / Branding -->
-    <header class="w-full border-b border-slate-800 py-4 px-6 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
+    <header class="w-full border-b border-slate-800/80 py-4 px-6 bg-cgs-card/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
             <span class="font-bold text-lg tracking-wider text-white">CGS <span class="text-cgs-yellow">MARKETPLACE</span></span>
             <span class="text-xs bg-cgs-yellow/10 text-cgs-yellow border border-cgs-yellow/30 px-3 py-1 rounded-full font-medium">
@@ -55,7 +59,7 @@
         </p>
 
         <!-- Formulario de Captación Integrado -->
-        <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-slate-900/80 border border-slate-800 p-6 md:p-8 rounded-2xl shadow-xl space-y-5">
+        <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-cgs-card border border-slate-700/60 p-6 md:p-8 rounded-2xl shadow-2xl space-y-5">
             
             <!-- Configuración FormSubmit: Envío simultáneo a oscarpirela1957@gmail.com y Redirección al Marketplace -->
             <input type="hidden" name="_next" value="https://pagina-web-cgs-marketplace-1.vercel.app">
@@ -64,23 +68,23 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Nombre de la Empresa</label>
-                    <input type="text" name="empresa" required placeholder="Ej. Operadora / Contratista C.A." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition">
+                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Nombre de la Empresa</label>
+                    <input type="text" name="empresa" required placeholder="Ej. Operadora / Contratista C.A." class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1"> Rif / Empresa </label>
-                    <input type="text" name="contacto" required placeholder="Ej. J-01235678-9" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition">
+                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Persona de Contacto / Cargo</label>
+                    <input type="text" name="contacto" required placeholder="Ej. Ing. Oscar Pirela - Director" class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Teléfono / WhatsApp</label>
-                    <input type="tel" name="telefono" required placeholder="+58 412 0000000" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition">
+                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Teléfono / WhatsApp</label>
+                    <input type="tel" name="telefono" required placeholder="+58 412 0000000" class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Tipo de Activo / Equipo a Publicar</label>
-                    <select name="categoria" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cgs-yellow transition">
+                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Tipo de Activo / Equipo a Publicar</label>
+                    <select name="categoria" required class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cgs-yellow transition">
                         <option value="" disabled selected>Seleccione categoría...</option>
                         <option value="Taladros">Taladros de Perforación / Workover</option>
                         <option value="Tuberias">Tubería API / OCTG (Casing, Tubing)</option>
@@ -91,21 +95,21 @@
                 </div>
             </div>
 
-            <!-- NUEVO CAMPO: PRECIO -->
+            <!-- CAMPO: PRECIO -->
             <div>
-                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Precio Referencial / Estimado (USD)</label>
-                <input type="text" name="precio" placeholder="Ej. $150,000 USD o A Consultar" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition">
+                <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Precio Referencial / Estimado (USD)</label>
+                <input type="text" name="precio" placeholder="Ej. $150,000 USD o A Consultar" class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
             </div>
 
-            <!-- NUEVO CAMPO: DESCRIPCIÓN DEL EQUIPO -->
+            <!-- CAMPO: DESCRIPCIÓN DEL EQUIPO -->
             <div>
-                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Descripción del Equipo</label>
-                <textarea name="descripcion" rows="3" placeholder="Indique especificaciones técnicas principales, marca, modelo, horas de uso o condición operativa del activo..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition resize-none"></textarea>
+                <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Descripción del Equipo</label>
+                <textarea name="descripcion" rows="3" placeholder="Indique especificaciones técnicas principales, marca, modelo, horas de uso o condición operativa del activo..." class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition resize-none"></textarea>
             </div>
 
             <div>
-                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Adjuntar Fotos del Equipo (Opcional)</label>
-                <input type="file" name="fotografias" multiple accept="image/*" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
+                <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Adjuntar Fotos del Equipo (Opcional)</label>
+                <input type="file" name="fotografias" multiple accept="image/*" class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-2 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
             </div>
 
             <!-- Botón de Acción con Animación e Indicador de Carga -->
