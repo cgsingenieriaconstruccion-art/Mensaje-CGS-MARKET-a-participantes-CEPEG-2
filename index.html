@@ -44,7 +44,7 @@
             <span>Exposición Gratuita por 90 Días para Participantes del CEPEG 2</span>
         </div>
 
-        <!-- Titular Principal con Tono Corporativo -->
+        <!-- Titular Principal -->
         <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
             Mantenga sus activos petroleros visibles los <span class="text-cgs-yellow">365 días del año</span>
         </h1>
@@ -57,6 +57,7 @@
         <!-- Formulario de Captación Integrado -->
         <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-slate-900/80 border border-slate-800 p-6 md:p-8 rounded-2xl shadow-xl space-y-5">
             
+            <!-- Configuración FormSubmit: Envío simultáneo a oscarpirela1957@gmail.com y Redirección al Marketplace -->
             <input type="hidden" name="_next" value="https://pagina-web-cgs-marketplace-1.vercel.app">
             <input type="hidden" name="_subject" value="Nuevo Registro VIP CEPEG 2 - CGS Marketplace">
             <input type="hidden" name="_captcha" value="false">
@@ -90,12 +91,24 @@
                 </div>
             </div>
 
+            <!-- NUEVO CAMPO: PRECIO -->
+            <div>
+                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Precio Referencial / Estimado (USD)</label>
+                <input type="text" name="precio" placeholder="Ej. $150,000 USD o A Consultar" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition">
+            </div>
+
+            <!-- NUEVO CAMPO: DESCRIPCIÓN DEL EQUIPO -->
+            <div>
+                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Descripción del Equipo</label>
+                <textarea name="descripcion" rows="3" placeholder="Indique especificaciones técnicas principales, marca, modelo, horas de uso o condición operativa del activo..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition resize-none"></textarea>
+            </div>
+
             <div>
                 <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Adjuntar Fotos del Equipo (Opcional)</label>
                 <input type="file" name="fotografias" multiple accept="image/*" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
             </div>
 
-            <!-- Botón de Envío con Color Corporativo y Spinner de Carga -->
+            <!-- Botón de Acción con Animación e Indicador de Carga -->
             <button type="submit" id="submitBtn" class="w-full bg-cgs-yellow hover:bg-cgs-yellow-dark text-slate-950 font-bold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base cursor-pointer">
                 <span id="btnText">Activar Mi Pase VIP por 90 Días</span>
                 
@@ -118,6 +131,7 @@
         <p>© 2026 CGS Ingeniería & Construcción, C.A. (RIF: J-50811393-4). Maracaibo, Zulia, Venezuela.</p>
     </footer>
 
+    <!-- Script de Control del Botón -->
     <script>
         const form = document.getElementById('vipForm');
         const submitBtn = document.getElementById('submitBtn');
