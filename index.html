@@ -16,14 +16,20 @@
 
     <!-- Tailwind CSS desde CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-cgs-yellow { background-color: #FFB000; }
+        .text-cgs-yellow { color: #FFB000; }
+        .border-cgs-yellow { border-color: #FFB000; }
+        .hover\:bg-cgs-yellow-dark:hover { background-color: #e09b00; }
+    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
     <!-- Header / Branding -->
-    <header class="w-full border-b border-slate-800 py-4 px-6 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+    <header class="w-full border-b border-slate-800 py-4 px-6 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <span class="font-bold text-lg tracking-wider text-amber-500">CGS<span class="text-white"> MARKETPLACE</span></span>
-            <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full font-medium">
+            <span class="font-bold text-lg tracking-wider text-white">CGS <span class="text-cgs-yellow">MARKETPLACE</span></span>
+            <span class="text-xs bg-cgs-yellow/10 text-cgs-yellow border border-cgs-yellow/30 px-3 py-1 rounded-full font-medium">
                 Pase VIP Expositores CEPEG 2
             </span>
         </div>
@@ -33,14 +39,14 @@
     <main class="max-w-3xl mx-auto px-6 py-12 flex-grow flex flex-col justify-center">
         
         <!-- Banner Superior -->
-        <div class="mb-6 inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm px-4 py-2 rounded-lg">
-            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <div class="mb-6 inline-flex items-center gap-2 bg-cgs-yellow/10 border border-cgs-yellow/30 text-cgs-yellow text-sm px-4 py-2 rounded-lg">
+            <svg class="w-5 h-5 text-cgs-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             <span>Exposición Gratuita por 90 Días para Participantes del CEPEG 2</span>
         </div>
 
-        <!-- Titular Principal -->
+        <!-- Titular Principal con Tono Corporativo -->
         <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            Mantenga sus activos petroleros visibles los <span class="text-amber-500">365 días del año</span>
+            Mantenga sus activos petroleros visibles los <span class="text-cgs-yellow">365 días del año</span>
         </h1>
 
         <!-- Subtítulo -->
@@ -48,10 +54,9 @@
             Consigne sus taladros, tubería API/OCTG, equipos de superficie y servicios técnicos. Intermediación comercial garantizada bajo acuerdos de confidencialidad y protección de comisiones <strong class="text-white">NCNDA / IMFPA</strong>.
         </p>
 
-        <!-- Formulario de Captación Integrado (Direccionado a oscarpirela1957@gmail.com) -->
-        <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-slate-800/60 border border-slate-700 p-6 md:p-8 rounded-2xl shadow-xl space-y-5">
+        <!-- Formulario de Captación Integrado -->
+        <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-slate-900/80 border border-slate-800 p-6 md:p-8 rounded-2xl shadow-xl space-y-5">
             
-            <!-- Redirección Automática al Marketplace tras Enviar -->
             <input type="hidden" name="_next" value="https://pagina-web-cgs-marketplace-1.vercel.app">
             <input type="hidden" name="_subject" value="Nuevo Registro VIP CEPEG 2 - CGS Marketplace">
             <input type="hidden" name="_captcha" value="false">
@@ -59,22 +64,22 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Nombre de la Empresa</label>
-                    <input type="text" name="empresa" required placeholder="Ej. Operadora / Contratista C.A." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition">
+                    <input type="text" name="empresa" required placeholder="Ej. Operadora / Contratista C.A." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Persona de Contacto / Cargo</label>
-                    <input type="text" name="contacto" required placeholder="Ej. Ing. Oscar Pirela - Director" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition">
+                    <input type="text" name="contacto" required placeholder="Ej. Ing. Oscar Pirela - Director" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition">
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Teléfono / WhatsApp</label>
-                    <input type="tel" name="telefono" required placeholder="+58 412 0000000" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition">
+                    <input type="tel" name="telefono" required placeholder="+58 412 0000000" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cgs-yellow transition">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Tipo de Activo / Equipo a Publicar</label>
-                    <select name="categoria" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition">
+                    <select name="categoria" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cgs-yellow transition">
                         <option value="" disabled selected>Seleccione categoría...</option>
                         <option value="Taladros">Taladros de Perforación / Workover</option>
                         <option value="Tuberias">Tubería API / OCTG (Casing, Tubing)</option>
@@ -87,17 +92,15 @@
 
             <div>
                 <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Adjuntar Fotos del Equipo (Opcional)</label>
-                <input type="file" name="fotografias" multiple accept="image/*" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-amber-500 file:text-slate-950 hover:file:bg-amber-400">
+                <input type="file" name="fotografias" multiple accept="image/*" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
             </div>
 
-            <!-- Botón Dinámico con Animación de Carga -->
-            <button type="submit" id="submitBtn" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base cursor-pointer">
+            <!-- Botón de Envío con Color Corporativo y Spinner de Carga -->
+            <button type="submit" id="submitBtn" class="w-full bg-cgs-yellow hover:bg-cgs-yellow-dark text-slate-950 font-bold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base cursor-pointer">
                 <span id="btnText">Activar Mi Pase VIP por 90 Días</span>
                 
-                <!-- Ícono de Flecha (Por Defecto) -->
                 <svg id="defaultIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 
-                <!-- Ícono de Carga / Spinner (Oculto inicialmente) -->
                 <svg id="loadingSpinner" class="w-5 h-5 animate-spin hidden text-slate-950" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -115,7 +118,6 @@
         <p>© 2026 CGS Ingeniería & Construcción, C.A. (RIF: J-50811393-4). Maracaibo, Zulia, Venezuela.</p>
     </footer>
 
-    <!-- Script para Animación e Indicador de Carga al Hacer Clic -->
     <script>
         const form = document.getElementById('vipForm');
         const submitBtn = document.getElementById('submitBtn');
@@ -124,11 +126,8 @@
         const loadingSpinner = document.getElementById('loadingSpinner');
 
         form.addEventListener('submit', function() {
-            // Deshabilitar botón para evitar clics repetidos
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
-
-            // Cambiar texto e ícono por animación giratoria
             btnText.textContent = "Procesando Registro VIP...";
             defaultIcon.classList.add('hidden');
             loadingSpinner.classList.remove('hidden');
