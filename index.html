@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGS Marketplace Petrolero | Pase VIP Post-CEPEG 2</title>
+
+    <!-- Open Graph / Meta Tags para Vista Previa e Imagen en WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CGS Marketplace Petrolero | Pase VIP Post-CEPEG 2">
+    <meta property="og:description" content="Active su vitrina VIP gratuita por 90 días para consignar taladros, tubería API y activos petroleros bajo confidencialidad NCNDA/IMFPA.">
+    <meta property="og:url" content="https://mensaje-cgs-market-a-participantes-cepeg-2.vercel.app">
+    <meta property="og:image" content="https://mensaje-cgs-market-a-participantes-cepeg-2.vercel.app/portada-cgs.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Branding -->
+    <header class="w-full border-b border-slate-800 py-4 px-6 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <span class="font-bold text-lg tracking-wider text-amber-500">CGS<span class="text-white"> MARKETPLACE</span></span>
+            <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full font-medium">
+                Pase VIP Expositores CEPEG 2
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Hero Container -->
+    <main class="max-w-3xl mx-auto px-6 py-12 flex-grow flex flex-col justify-center">
+        
+        <!-- Banner Superior -->
+        <div class="mb-6 inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm px-4 py-2 rounded-lg">
+            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>Exposición Gratuita por 90 Días para Participantes del CEPEG 2</span>
+        </div>
+
+        <!-- Titular Principal -->
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            Mantenga sus activos petroleros visibles los <span class="text-amber-500">365 días del año</span>
+        </h1>
+
+        <!-- Subtítulo -->
+        <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">
+            Consigne sus taladros, tubería API/OCTG, equipos de superficie y servicios técnicos. Intermediación comercial garantizada bajo acuerdos de confidencialidad y protección de comisiones <strong class="text-white">NCNDA / IMFPA</strong>.
+        </p>
+
+        <!-- Formulario de Captación Integrado (FormSubmit) -->
+        <form action="https://formsubmit.co/cgsingenieriaconstruccion@gmail.com" method="POST" enctype="multipart/form-data" class="bg-slate-800/60 border border-slate-700 p-6 md:p-8 rounded-2xl shadow-xl space-y-5">
+            
+            <!-- Redirección Automática al enviar -->
+            <input type="hidden" name="_next" value="https://pagina-web-cgs-marketplace-1.vercel.app">
+            <input type="hidden" name="_subject" value="Nuevo Registro VIP CEPEG 2 - CGS Marketplace">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Nombre de la Empresa</label>
+                    <input type="text" name="empresa" required placeholder="Ej. Operadora / Contratista C.A." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Persona de Contacto / Cargo</label>
+                    <input type="text" name="contacto" required placeholder="Ej. Ing. Oscar Pirela - Director" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Teléfono / WhatsApp</label>
+                    <input type="tel" name="telefono" required placeholder="+58 412 0000000" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Tipo de Activo / Equipo a Publicar</label>
+                    <select name="categoria" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition">
+                        <option value="" disabled selected>Seleccione categoría...</option>
+                        <option value="Taladros">Taladros de Perforación / Workover</option>
+                        <option value="Tuberias">Tubería API / OCTG (Casing, Tubing)</option>
+                        <option value="BOP_Control">Control de Pozos (BOP, Válvulas)</option>
+                        <option value="Bombas_Superficie">Bombas de Lodos / Equipos Superficie</option>
+                        <option value="Otros">Otros Activos / Infraestructura</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Adjuntar Fotos del Equipo (Opcional)</label>
+                <input type="file" name="fotografias" multiple accept="image/*" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-amber-500 file:text-slate-950 hover:file:bg-amber-400">
+            </div>
+
+            <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base">
+                <span>Activar Mi Pase VIP por 90 Días</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+
+            <p class="text-center text-xs text-slate-400 mt-2">
+                🔒 Toda información está protegida bajo protocolo <strong>NCNDA / IMFPA</strong>. Redirección automática al marketplace al enviar.
+            </p>
+        </form>
+    </main>
+
+    <!-- Footer Corporativo -->
+    <footer class="w-full border-t border-slate-800 py-6 px-6 text-center text-xs text-slate-500">
+        <p>© 2026 CGS Ingeniería & Construcción, C.A. (RIF: J-50811393-4). Maracaibo, Zulia, Venezuela.</p>
+    </footer>
+
+</body>
+</html>
