@@ -9,8 +9,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="CGS Marketplace Petrolero | Pase VIP Post-CEPEG 2">
     <meta property="og:description" content="Active su vitrina VIP gratuita por 90 días para consignar taladros, tubería API y activos petroleros bajo confidencialidad NCNDA/IMFPA.">
-    <meta property="og:url" content="https://mensaje-cgs-market-a-participantes-cepeg-2.vercel.app">
-    <meta property="og:image" content="https://mensaje-cgs-market-a-participantes-cepeg-2.vercel.app/portada-cgs.jpg">
+    <meta property="og:url" content="https://cgs-market-cepeg2.vercel.app">
+    <meta property="og:image" content="https://cgs-market-cepeg2.vercel.app/portada-cgs.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -48,10 +48,10 @@
             Consigne sus taladros, tubería API/OCTG, equipos de superficie y servicios técnicos. Intermediación comercial garantizada bajo acuerdos de confidencialidad y protección de comisiones <strong class="text-white">NCNDA / IMFPA</strong>.
         </p>
 
-        <!-- Formulario de Captación Integrado (FormSubmit) -->
-        <form action="https://formsubmit.co/cgsingenieriaconstruccion@gmail.com" method="POST" enctype="multipart/form-data" class="bg-slate-800/60 border border-slate-700 p-6 md:p-8 rounded-2xl shadow-xl space-y-5">
+        <!-- Formulario de Captación Integrado (Direccionado a oscarpirela1957@gmail.com) -->
+        <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-slate-800/60 border border-slate-700 p-6 md:p-8 rounded-2xl shadow-xl space-y-5">
             
-            <!-- Redirección Automática al enviar -->
+            <!-- Redirección Automática al Marketplace tras Enviar -->
             <input type="hidden" name="_next" value="https://pagina-web-cgs-marketplace-1.vercel.app">
             <input type="hidden" name="_subject" value="Nuevo Registro VIP CEPEG 2 - CGS Marketplace">
             <input type="hidden" name="_captcha" value="false">
@@ -90,9 +90,18 @@
                 <input type="file" name="fotografias" multiple accept="image/*" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-amber-500 file:text-slate-950 hover:file:bg-amber-400">
             </div>
 
-            <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base">
-                <span>Activar Mi Pase VIP por 90 Días</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <!-- Botón Dinámico con Animación de Carga -->
+            <button type="submit" id="submitBtn" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base cursor-pointer">
+                <span id="btnText">Activar Mi Pase VIP por 90 Días</span>
+                
+                <!-- Ícono de Flecha (Por Defecto) -->
+                <svg id="defaultIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                
+                <!-- Ícono de Carga / Spinner (Oculto inicialmente) -->
+                <svg id="loadingSpinner" class="w-5 h-5 animate-spin hidden text-slate-950" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
             </button>
 
             <p class="text-center text-xs text-slate-400 mt-2">
@@ -105,6 +114,26 @@
     <footer class="w-full border-t border-slate-800 py-6 px-6 text-center text-xs text-slate-500">
         <p>© 2026 CGS Ingeniería & Construcción, C.A. (RIF: J-50811393-4). Maracaibo, Zulia, Venezuela.</p>
     </footer>
+
+    <!-- Script para Animación e Indicador de Carga al Hacer Clic -->
+    <script>
+        const form = document.getElementById('vipForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const defaultIcon = document.getElementById('defaultIcon');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+
+        form.addEventListener('submit', function() {
+            // Deshabilitar botón para evitar clics repetidos
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+
+            // Cambiar texto e ícono por animación giratoria
+            btnText.textContent = "Procesando Registro VIP...";
+            defaultIcon.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+        });
+    </script>
 
 </body>
 </html>
