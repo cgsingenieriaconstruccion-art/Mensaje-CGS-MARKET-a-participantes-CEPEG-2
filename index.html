@@ -11,18 +11,15 @@
     <meta property="og:description" content="Active su vitrina VIP gratuita por 90 días para consignar taladros, tubería API y activos petroleros bajo confidencialidad NCNDA/IMFPA.">
     <meta property="og:url" content="https://cgs-market-cepeg2.vercel.app">
     <meta property="og:image" content="https://cgs-market-cepeg2.vercel.app/portada-cgs.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
 
-    <!-- Tailwind CSS desde CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Estilos de la paleta oficial CGS */
-        .bg-cgs-main { background-color: #081a34; }       /* Fondo general profundo */
-        .bg-cgs-card { background-color: #0b2242; }       /* Tarjeta de formulario */
-        .bg-cgs-input { background-color: #07152b; }      /* Campos de texto */
-        .border-cgs-input { border-color: #1a3966; }     /* Bordes de los inputs */
-        .bg-cgs-yellow { background-color: #FFB000; }     /* Amarillo corporativo CGS */
+        .bg-cgs-main { background-color: #081a34; }
+        .bg-cgs-card { background-color: #0b2242; }
+        .bg-cgs-input { background-color: #07152b; }
+        .border-cgs-input { border-color: #1a3966; }
+        .bg-cgs-yellow { background-color: #FFB000; }
         .text-cgs-yellow { color: #FFB000; }
         .border-cgs-yellow { border-color: #FFB000; }
         .hover\:bg-cgs-yellow-dark:hover { background-color: #e09b00; }
@@ -30,7 +27,7 @@
 </head>
 <body class="bg-cgs-main text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Header / Branding -->
+    <!-- Header -->
     <header class="w-full border-b border-slate-800/80 py-4 px-6 bg-cgs-card/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
             <span class="font-bold text-lg tracking-wider text-white">CGS <span class="text-cgs-yellow">MARKETPLACE</span></span>
@@ -43,31 +40,30 @@
     <!-- Main Container -->
     <main class="max-w-3xl mx-auto px-4 sm:px-6 py-10 flex-grow flex flex-col justify-center">
         
-        <!-- Banner Superior -->
+        <!-- Banner -->
         <div class="mb-6 inline-flex items-center gap-2 bg-cgs-yellow/10 border border-cgs-yellow/30 text-cgs-yellow text-sm px-4 py-2 rounded-lg">
             <svg class="w-5 h-5 text-cgs-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             <span>Exposición Gratuita por 90 Días para Participantes del CEPEG 2</span>
         </div>
 
-        <!-- Titular Principal -->
+        <!-- Titular -->
         <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
             Mantenga sus activos petroleros visibles los <span class="text-cgs-yellow">365 días del año</span>
         </h1>
 
-        <!-- Subtítulo -->
         <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">
-            Consigne sus taladros, tubería API/OCTG, equipos de superficie y servicios técnicos. Intermediación comercial garantizada bajo acuerdos de confidencialidad y protección de comisiones <strong class="text-white">NCNDA / IMFPA</strong>.
+            Consigne sus taladros, tubería API/OCTG, equipos de superficie y servicios técnicos. Intermediación comercial garantizada bajo acuerdos de confidencialidad <strong class="text-white">NCNDA / IMFPA</strong>.
         </p>
 
-        <!-- Formulario Replicado con Respuesta Automática al Cliente -->
+        <!-- Formulario FormSubmit Corregido -->
         <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-cgs-card border border-cgs-input p-6 md:p-8 rounded-2xl shadow-2xl space-y-5">
             
-            <!-- Redirección y Configuración para el Administrador -->
+            <!-- Configuraciones del Sistema FormSubmit -->
             <input type="hidden" name="_next" value="https://pagina-web-cgs-marketplace-1.vercel.app">
             <input type="hidden" name="_subject" value="Nuevo Registro VIP CEPEG 2 - CGS Marketplace">
             <input type="hidden" name="_captcha" value="false">
 
-            <!-- Configuración del Mensaje Automático de Bienvenida enviado al Cliente -->
+            <!-- Mensaje Automático para el Cliente que se Registra -->
             <input type="hidden" name="_autoresponse" value="¡Felicitaciones! Bienvenido a CGS Marketplace Petrolero, la plataforma B2B de comercialización con mayor proyección de ventas en el mercado petrolero de Venezuela. Queda activado su disfrute por 90 días de licencia VIP. Le invitamos a completar su registro y explorar nuestro inventario en: https://pagina-web-cgs-marketplace-1.vercel.app">
 
             <!-- Fila 1: Nombre Empresa -->
@@ -76,7 +72,7 @@
                 <input type="text" name="nombre_empresa" required placeholder="Ej. V & V Zulia, C.A" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
             </div>
 
-            <!-- Fila 2: Empresa / RIF & Teléfono / WhatsApp -->
+            <!-- Fila 2: Empresa / RIF & Teléfono -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Empresa / RIF *</label>
@@ -88,13 +84,13 @@
                 </div>
             </div>
 
-            <!-- Fila 3: Correo Electrónico del Cliente (Destinatario del Auto-Responder) -->
+            <!-- Fila 3: Correo Electrónico (Clave name="email" requerida) -->
             <div>
                 <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Correo Electrónico *</label>
                 <input type="email" name="email" required placeholder="contacto@empresa.com" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
             </div>
 
-            <!-- Fila 4: Categoría del Equipo / Activo -->
+            <!-- Fila 4: Categoría -->
             <div>
                 <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Categoría del Equipo / Activo *</label>
                 <select name="categoria_activo" required class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cgs-yellow transition">
@@ -109,34 +105,34 @@
                 </select>
             </div>
 
-            <!-- Fila 5: Precio Referencial USD -->
+            <!-- Fila 5: Precio Referencial -->
             <div>
                 <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Precio Referencial / Estimado (USD)</label>
                 <input type="text" name="precio_usd" placeholder="Ej. $150,000 USD o A Consultar" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
             </div>
 
-            <!-- Fila 6: Fotografías del Activo (2 Adjuntos) -->
+            <!-- Fila 6: Fotografías -->
             <div>
-                <label class="block text-xs font-bold uppercase text-slate-200 mb-2">Fotografías del Activo (Adjuntar 2 fotos) *</label>
+                <label class="block text-xs font-bold uppercase text-slate-200 mb-2">Fotografías del Activo (Adjuntar 2 fotos)</label>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <span class="block text-[11px] text-slate-400 mb-1">Foto 1 (Vista General)</span>
-                        <input type="file" name="foto_1_general" accept="image/*" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-3 py-2 text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
+                        <input type="file" name="attachment1" accept="image/*" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-3 py-2 text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
                     </div>
                     <div>
                         <span class="block text-[11px] text-slate-400 mb-1">Foto 2 (Placa/Detalle)</span>
-                        <input type="file" name="foto_2_detalle" accept="image/*" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-3 py-2 text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
+                        <input type="file" name="attachment2" accept="image/*" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-3 py-2 text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
                     </div>
                 </div>
             </div>
 
-            <!-- Fila 7: Descripción Breve del Inventario -->
+            <!-- Fila 7: Descripción -->
             <div>
                 <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Descripción Breve del Inventario *</label>
                 <textarea name="descripcion_inventario" rows="3" required placeholder="Modelo, cantidad, condición (nuevo/paralizado) y ubicación actual..." class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition resize-none"></textarea>
             </div>
 
-            <!-- Recuadro Informativo NCNDA / IMFPA -->
+            <!-- Cuadro Informativo NCNDA / IMFPA -->
             <div class="bg-cgs-input/80 border border-cgs-input rounded-xl p-4 flex gap-3 items-start">
                 <svg class="w-5 h-5 text-cgs-yellow shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                 <div class="text-xs text-slate-300 leading-relaxed">
@@ -145,12 +141,10 @@
                 </div>
             </div>
 
-            <!-- Botón Principal con Indicador de Carga -->
+            <!-- Botón de Envío -->
             <button type="submit" id="submitBtn" class="w-full bg-cgs-yellow hover:bg-cgs-yellow-dark text-slate-950 font-extrabold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base cursor-pointer uppercase tracking-wide">
                 <span id="btnText">Activar Mi Pase VIP por 90 Días</span>
-                
                 <svg id="defaultIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                
                 <svg id="loadingSpinner" class="w-5 h-5 animate-spin hidden text-slate-950" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -159,7 +153,7 @@
         </form>
     </main>
 
-    <!-- Footer Corporativo -->
+    <!-- Footer -->
     <footer class="w-full border-t border-slate-800/80 py-6 px-6 text-center text-xs text-slate-500">
         <p>© 2026 CGS Ingeniería & Construcción, C.A. (RIF: J-50811393-4). Maracaibo, Zulia, Venezuela.</p>
     </footer>
