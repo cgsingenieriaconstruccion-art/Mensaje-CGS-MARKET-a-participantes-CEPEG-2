@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGS Marketplace Petrolero | Pase VIP Post-CEPEG 2</title>
 
-    <!-- Open Graph / Meta Tags para Vista Previa e Imagen en WhatsApp -->
+    <!-- Open Graph / Meta Tags para WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="CGS Marketplace Petrolero | Pase VIP Post-CEPEG 2">
     <meta property="og:description" content="Active su vitrina VIP gratuita por 90 días para consignar taladros, tubería API y activos petroleros bajo confidencialidad NCNDA/IMFPA.">
@@ -17,17 +17,18 @@
     <!-- Tailwind CSS desde CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Paleta de Colores Oficiales CGS */
-        .bg-cgs-navy { background-color: #0b172a; }        /* Azul Marino Corporativo CGS */
-        .bg-cgs-card { background-color: #0f213d; }        /* Azul Tarjeta Formulario */
-        .bg-cgs-input { background-color: #07101e; }       /* Azul Oscuro Campos Entrada */
-        .bg-cgs-yellow { background-color: #FFB000; }      /* Amarillo/Dorado CGS */
+        /* Estilos de la paleta oficial CGS */
+        .bg-cgs-main { background-color: #081a34; }       /* Fondo general profundo */
+        .bg-cgs-card { background-color: #0b2242; }       /* Tarjeta de formulario */
+        .bg-cgs-input { background-color: #07152b; }      /* Campos de texto */
+        .border-cgs-input { border-color: #1a3966; }     /* Bordes de los inputs */
+        .bg-cgs-yellow { background-color: #FFB000; }     /* Amarillo corporativo CGS */
         .text-cgs-yellow { color: #FFB000; }
         .border-cgs-yellow { border-color: #FFB000; }
         .hover\:bg-cgs-yellow-dark:hover { background-color: #e09b00; }
     </style>
 </head>
-<body class="bg-cgs-navy text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-cgs-main text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
     <!-- Header / Branding -->
     <header class="w-full border-b border-slate-800/80 py-4 px-6 bg-cgs-card/90 backdrop-blur sticky top-0 z-50">
@@ -39,8 +40,8 @@
         </div>
     </header>
 
-    <!-- Main Hero Container -->
-    <main class="max-w-3xl mx-auto px-6 py-12 flex-grow flex flex-col justify-center">
+    <!-- Main Container -->
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-10 flex-grow flex flex-col justify-center">
         
         <!-- Banner Superior -->
         <div class="mb-6 inline-flex items-center gap-2 bg-cgs-yellow/10 border border-cgs-yellow/30 text-cgs-yellow text-sm px-4 py-2 rounded-lg">
@@ -58,84 +59,112 @@
             Consigne sus taladros, tubería API/OCTG, equipos de superficie y servicios técnicos. Intermediación comercial garantizada bajo acuerdos de confidencialidad y protección de comisiones <strong class="text-white">NCNDA / IMFPA</strong>.
         </p>
 
-        <!-- Formulario de Captación Integrado -->
-        <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-cgs-card border border-slate-700/60 p-6 md:p-8 rounded-2xl shadow-2xl space-y-5">
+        <!-- Formulario Replicado con Respuesta Automática al Cliente -->
+        <form id="vipForm" action="https://formsubmit.co/oscarpirela1957@gmail.com" method="POST" enctype="multipart/form-data" class="bg-cgs-card border border-cgs-input p-6 md:p-8 rounded-2xl shadow-2xl space-y-5">
             
-            <!-- Configuración FormSubmit: Envío simultáneo a oscarpirela1957@gmail.com y Redirección al Marketplace -->
+            <!-- Redirección y Configuración para el Administrador -->
             <input type="hidden" name="_next" value="https://pagina-web-cgs-marketplace-1.vercel.app">
             <input type="hidden" name="_subject" value="Nuevo Registro VIP CEPEG 2 - CGS Marketplace">
             <input type="hidden" name="_captcha" value="false">
 
+            <!-- Configuración del Mensaje Automático de Bienvenida enviado al Cliente -->
+            <input type="hidden" name="_autoresponse" value="¡Felicitaciones! Bienvenido a CGS Marketplace Petrolero, la plataforma B2B de comercialización con mayor proyección de ventas en el mercado petrolero de Venezuela. Queda activado su disfrute por 90 días de licencia VIP. Le invitamos a completar su registro y explorar nuestro inventario en: https://pagina-web-cgs-marketplace-1.vercel.app">
+
+            <!-- Fila 1: Nombre Empresa -->
+            <div>
+                <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Nombre Empresa *</label>
+                <input type="text" name="nombre_empresa" required placeholder="Ej. V & V Zulia, C.A" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
+            </div>
+
+            <!-- Fila 2: Empresa / RIF & Teléfono / WhatsApp -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Nombre de la Empresa</label>
-                    <input type="text" name="empresa" required placeholder="Ej. Operadora / Contratista C.A." class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
+                    <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Empresa / RIF *</label>
+                    <input type="text" name="empresa_rif" required placeholder="Nombre o RIF" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-1"> Rif / Empresa </label>
-                    <input type="text" name="contacto" required placeholder="Ej. j-01235678-9 " class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
+                    <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Teléfono / WhatsApp *</label>
+                    <input type="tel" name="telefono_whatsapp" required placeholder="+58 412 0000000" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Teléfono / WhatsApp</label>
-                    <input type="tel" name="telefono" required placeholder="+58 412 0000000" class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
+            <!-- Fila 3: Correo Electrónico del Cliente (Destinatario del Auto-Responder) -->
+            <div>
+                <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Correo Electrónico *</label>
+                <input type="email" name="email" required placeholder="contacto@empresa.com" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
+            </div>
+
+            <!-- Fila 4: Categoría del Equipo / Activo -->
+            <div>
+                <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Categoría del Equipo / Activo *</label>
+                <select name="categoria_activo" required class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cgs-yellow transition">
+                    <option value="" disabled selected>Seleccione una categoría...</option>
+                    <option value="Taladros (Drill Rig / Workover Rig)">Taladros (Drill Rig / Workover Rig)</option>
+                    <option value="Tuberías API y OCTG (Casing / Drill Pipe)">Tuberías API y OCTG (Casing / Drill Pipe)</option>
+                    <option value="Sistemas BOP y Control de Pozos">Sistemas BOP y Control de Pozos</option>
+                    <option value="Bombas de Lodos y Motores de Fondo">Bombas de Lodos y Motores de Fondo</option>
+                    <option value="Válvulas y Sartas de Perforación">Válvulas y Sartas de Perforación</option>
+                    <option value="Separadores, Plantas o Campamentos">Separadores, Plantas o Campamentos</option>
+                    <option value="Otros Equipos e Insumos Petroleros">Otros Equipos e Insumos Petroleros</option>
+                </select>
+            </div>
+
+            <!-- Fila 5: Precio Referencial USD -->
+            <div>
+                <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Precio Referencial / Estimado (USD)</label>
+                <input type="text" name="precio_usd" placeholder="Ej. $150,000 USD o A Consultar" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
+            </div>
+
+            <!-- Fila 6: Fotografías del Activo (2 Adjuntos) -->
+            <div>
+                <label class="block text-xs font-bold uppercase text-slate-200 mb-2">Fotografías del Activo (Adjuntar 2 fotos) *</label>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <span class="block text-[11px] text-slate-400 mb-1">Foto 1 (Vista General)</span>
+                        <input type="file" name="foto_1_general" accept="image/*" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-3 py-2 text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
+                    </div>
+                    <div>
+                        <span class="block text-[11px] text-slate-400 mb-1">Foto 2 (Placa/Detalle)</span>
+                        <input type="file" name="foto_2_detalle" accept="image/*" class="w-full bg-cgs-input border border-cgs-input rounded-lg px-3 py-2 text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Tipo de Activo / Equipo a Publicar</label>
-                    <select name="categoria" required class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cgs-yellow transition">
-                        <option value="" disabled selected>Seleccione categoría...</option>
-                        <option value="Taladros">Taladros de Perforación / Workover</option>
-                        <option value="Tuberias">Tubería API / OCTG (Casing, Tubing)</option>
-                        <option value="BOP_Control">Control de Pozos (BOP, Válvulas)</option>
-                        <option value="Bombas_Superficie">Bombas de Lodos / Equipos Superficie</option>
-                        <option value="Otros">Otros Activos / Infraestructura</option>
-                    </select>
+            </div>
+
+            <!-- Fila 7: Descripción Breve del Inventario -->
+            <div>
+                <label class="block text-xs font-bold uppercase text-slate-200 mb-1">Descripción Breve del Inventario *</label>
+                <textarea name="descripcion_inventario" rows="3" required placeholder="Modelo, cantidad, condición (nuevo/paralizado) y ubicación actual..." class="w-full bg-cgs-input border border-cgs-input rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition resize-none"></textarea>
+            </div>
+
+            <!-- Recuadro Informativo NCNDA / IMFPA -->
+            <div class="bg-cgs-input/80 border border-cgs-input rounded-xl p-4 flex gap-3 items-start">
+                <svg class="w-5 h-5 text-cgs-yellow shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                <div class="text-xs text-slate-300 leading-relaxed">
+                    <strong class="text-cgs-yellow block font-semibold mb-0.5">Protección & Confidencialidad Comercial</strong>
+                    Información consignada protegida bajo acuerdos de confidencialidad <strong>(NCNDA / IMFPA)</strong> por <strong>CGS Ingeniería & Construcción, C.A.</strong>
                 </div>
             </div>
 
-            <!-- CAMPO: PRECIO -->
-            <div>
-                <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Precio Referencial / Estimado (USD)</label>
-                <input type="text" name="precio" placeholder="Ej. $150,000 USD o A Consultar" class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition">
-            </div>
-
-            <!-- CAMPO: DESCRIPCIÓN DEL EQUIPO -->
-            <div>
-                <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Descripción del Equipo</label>
-                <textarea name="descripcion" rows="3" placeholder="Indique especificaciones técnicas principales, marca, modelo, horas de uso o condición operativa del activo..." class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-cgs-yellow transition resize-none"></textarea>
-            </div>
-
-            <div>
-                <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Adjuntar Fotos del Equipo (Opcional)</label>
-                <input type="file" name="fotografias" multiple accept="image/*" class="w-full bg-cgs-input border border-slate-700 rounded-lg px-4 py-2 text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-cgs-yellow file:text-slate-950 hover:file:bg-cgs-yellow-dark">
-            </div>
-
-            <!-- Botón de Acción con Animación e Indicador de Carga -->
-            <button type="submit" id="submitBtn" class="w-full bg-cgs-yellow hover:bg-cgs-yellow-dark text-slate-950 font-bold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base cursor-pointer">
+            <!-- Botón Principal con Indicador de Carga -->
+            <button type="submit" id="submitBtn" class="w-full bg-cgs-yellow hover:bg-cgs-yellow-dark text-slate-950 font-extrabold py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-base cursor-pointer uppercase tracking-wide">
                 <span id="btnText">Activar Mi Pase VIP por 90 Días</span>
                 
-                <svg id="defaultIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <svg id="defaultIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 
                 <svg id="loadingSpinner" class="w-5 h-5 animate-spin hidden text-slate-950" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
             </button>
-
-            <p class="text-center text-xs text-slate-400 mt-2">
-                🔒 Toda información está protegida bajo protocolo <strong>NCNDA / IMFPA</strong>. Redirección automática al marketplace al enviar.
-            </p>
         </form>
     </main>
 
     <!-- Footer Corporativo -->
-    <footer class="w-full border-t border-slate-800 py-6 px-6 text-center text-xs text-slate-500">
+    <footer class="w-full border-t border-slate-800/80 py-6 px-6 text-center text-xs text-slate-500">
         <p>© 2026 CGS Ingeniería & Construcción, C.A. (RIF: J-50811393-4). Maracaibo, Zulia, Venezuela.</p>
     </footer>
 
-    <!-- Script de Control del Botón -->
+    <!-- Script de Animación -->
     <script>
         const form = document.getElementById('vipForm');
         const submitBtn = document.getElementById('submitBtn');
